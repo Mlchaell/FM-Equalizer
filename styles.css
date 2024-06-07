@@ -102,6 +102,12 @@ footer {
   margin-bottom: 3rem;
 }
 
+@media only screen and (min-width: 1500px) {
+  .header__logo {
+    min-height: 3rem;
+  }
+}
+
 header .heading-l {
   margin-bottom: 1rem;
 }
@@ -128,6 +134,12 @@ header .heading-l {
 
   header .body {
     max-width: 60ch;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  header .body {
+    max-width: 70ch;
   }
 }
 
@@ -163,7 +175,14 @@ main {
 @media only screen and (min-width: 1000px) {
   main {
     background-size: 35% 80%;
-    background-position: 60% center;
+    background-position: 60% -3rem;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  main {
+    background-size: contain;
+    background-position: 60% -2rem;
   }
 }
 
@@ -218,6 +237,16 @@ main {
   .main__cta {
     max-width: clamp(20rem, 8.636rem + 18.182vw, 25rem);
     transform: translateY(-20rem) translateX(clamp(30rem, -15.455rem + 72.727vw, 50rem));
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .main__illustration {
+    transform: translateY(-8rem) translateX(clamp(-20rem, 10rem + -32vw, -30rem));
+  }
+
+  .main__cta {
+    transform: translateY(-20rem) translateX(clamp(50rem, -40rem + 96vw, 80rem));
   }
 }
 
@@ -276,11 +305,18 @@ footer .flex-row {
   }
 
   .footer__logo {
+    min-height: 3rem;
     align-self: center;
   }
 
   footer .body {
     max-width: 40ch;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  footer {
+    margin-top: 14rem;
   }
 }
 
@@ -291,19 +327,10 @@ Helper Classes
 */
 
 .heading-l {
-  font-size: clamp(2.5rem, 1.643rem + 4.286vw, 5.5rem);
+  font-size: clamp(2.5rem, 1.833rem + 3.333vw, 6rem);
   font-weight: var(--fw-bold);
   color: var(--black);
-  line-height: clamp(2.5rem, 1.5rem + 5vw, 6rem);
-}
-
-@media only screen and (min-width: 540px), (max-width: 688px) {
-  .heading-l {
-    font-size: 2.7rem;
-    line-height: 2.7rem;
-  }
-
-  /* i got a bit lazy */
+  line-height: clamp(2.5rem, 1.833rem + 3.333vw, 6rem);
 }
 
 .heading-m {
@@ -314,6 +341,12 @@ Helper Classes
 .body {
   font-weight: 1.6rem;
   color: var(--black);
+}
+
+@media only screen and (min-width: 1500px) {
+  .body {
+    font-size: 1.2rem;
+  }
 }
 
 .body .bold {
